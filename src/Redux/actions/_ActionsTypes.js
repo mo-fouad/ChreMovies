@@ -1,0 +1,7 @@
+
+
+// Movies Actions Types
+export const LOADING_MOVIES = "LOADING_MOVIES";
+export const LOADING_MOVIES_DONE = "LOADING_MOVIES_DONE"
+export const LOADING_MOVIES_FAILED = "LOADING_MOVIES_FAILED"
+
