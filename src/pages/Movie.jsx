@@ -44,7 +44,7 @@ function Movie() {
 
 
     const MovieAPI = async () => {
-        const MovieRaw = await fetch(`http://www.omdbapi.com/?apikey=f7351c22&i=${Movie}`)
+        const MovieRaw = await fetch(`https://www.omdbapi.com/?apikey=f7351c22&i=${Movie}`)
         const MovieJson = await MovieRaw.json();
 
         if (MovieJson.Response === "True") {

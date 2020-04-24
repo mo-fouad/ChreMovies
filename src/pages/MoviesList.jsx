@@ -61,14 +61,17 @@ function MoviesList() {
     return (
         <Container>
             {LoadingMovies && <Loading/>}
-            {moviesData && moviesData.length > 0 && <MoviesListWrapper>
-                {moviesData.map((movie, index) =>
-                    <MovieListItem movie={movie} key={index}/>
-                )}
-            </MoviesListWrapper>
-            } else {
-            <LoadingError message="Looks Like We Have SomeThing worng in the API "/>
-        }
+            {
+                moviesData && moviesData.length > 0 ?
+
+                    <MoviesListWrapper>
+                        {moviesData.map((movie, index) =>
+                            <MovieListItem movie={movie} key={index}/>
+                        )}
+                    </MoviesListWrapper>
+                    :
+                    <LoadingError message="Looks Like We Have SomeThing worng in the API "/>
+            }
 
         </Container>
     );
